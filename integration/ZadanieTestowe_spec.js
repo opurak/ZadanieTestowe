@@ -93,6 +93,7 @@ describe('Login/Sign up Flow', ()=>{
             .should('have.value', 'gocak80455@tourcc.com')
         cy.get('.password-field')
             .type('Testacc320')
+        cy.pause()
         cy.get('.register').click()
         cy.url().should('include', '/dashboard/accounts')
     })
